@@ -3,7 +3,7 @@
   "description": "[DO NOT USE] This package is made for a study on change analysis in CDK. Never tested and not maintained.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/henlima/mock-construct-library.git"
+    "url": "https://github.com/reeckset/mock-cdk-page-and-api.git"
   },
   "scripts": {
     "clobber": "npx projen clobber",

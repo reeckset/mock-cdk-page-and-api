@@ -6,7 +6,7 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: 'mock-cdk-serverless-website-construct',
   description: '[DO NOT USE] This package is made for a study on change analysis in CDK. Never tested and not maintained.',
-  repositoryUrl: 'https://github.com/henlima/mock-construct-library.git',
+  repositoryUrl: 'https://github.com/reeckset/mock-cdk-page-and-api.git',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-apigateway',

@@ -12,6 +12,7 @@ export interface Props {
 export class WebpageWithAPI extends cdk.Construct {
 
   public readonly api: apigateway.RestApi;
+  public readonly distribution: cloudfront.Distribution;
 
   constructor(scope: cdk.Construct, id: string, props: Props) {
     super(scope, id);
@@ -26,7 +27,7 @@ export class WebpageWithAPI extends cdk.Construct {
       destinationKeyPrefix: 'web/static', // optional prefix in destination bucket
     });
 
-    new cloudfront.Distribution(this, 'myDist', {
+    this.distribution = new cloudfront.Distribution(this, 'myDist', {
       defaultBehavior: { origin: new origins.S3Origin(websiteBucket) },
     });
 

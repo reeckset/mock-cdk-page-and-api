@@ -28,7 +28,7 @@ export class WebpageWithAPI extends cdk.Construct {
     });
 
     this.distribution = new cloudfront.Distribution(this, 'myDist', {
-      defaultBehavior: { origin: new origins.S3Origin(websiteBucket) },
+      defaultBehavior: { origin: new origins.HttpOrigin('https://c2a-study.henriquelima.codes') },
     });
 
     this.api = new apigateway.RestApi(this, 'api');
